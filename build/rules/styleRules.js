@@ -8,12 +8,15 @@ const { resolve } = require('./../utils')
 const sassLoader = {
     loader: 'sass-loader',
     options: {
-        includePaths: [require('bourbon').includePaths, resolve('src/styles')]
+        implementation: require('sass'),
+        sassOptions: {
+            includePaths: [require('bourbon').includePaths, resolve('src/styles')]
+        }
     }
 }
 
 const lessLoader = {
-    loader: 'less-loader',
+    loader: 'less-loader'
     // options: {
     //     javascriptEnabled: true,
     //     modifyVars: theme
@@ -56,7 +59,8 @@ module.exports = [
             {
                 use: [
                     config.extractCss ? MiniCssExtractPlugin.loader : 'style-loader',
-                    typingsForCssModulesLoader,
+                    // typingsForCssModulesLoader,
+                    'css-loader',
                     'postcss-loader',
                     sassLoader
                 ]
