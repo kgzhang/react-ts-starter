@@ -9,13 +9,10 @@
         "rootDirs": ["./src"],
         "baseUrl": "./src",
         "paths": {
-            "@constants/*": ["constants/*"],
             "@services/*": ["services/*"],
-            "@utils/*": ["utils/*"],
-            "@assets/*": ["assets/*"],
             "@components/*": ["components/*"],
-            "@views/*": ["containers/views/*"],
-            "@shared/*": ["containers/shared/*"]
+            "@pages/*": ["pages/*"],
+            "@helpers/*": ["herlpers/*"]
         },
         "jsx": "react",
         "alwaysStrict": true,
