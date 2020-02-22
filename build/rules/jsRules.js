@@ -6,6 +6,7 @@ module.exports = [
   {
     test: /\.(j|t)sx?$/,
     include: [resolve('src')],
+    // include: [resolve('src'), resolve('/node_modules/react-dom/')],
     use: [
       cacheLoader,
       {
@@ -15,6 +16,7 @@ module.exports = [
       {
         loader: 'babel-loader',
         options: {
+          cacheDirectory: true,
           babelrc: false,
           presets: [
             [
@@ -29,10 +31,16 @@ module.exports = [
             ['@babel/plugin-proposal-decorators', { legacy: true }],
             ['@babel/plugin-proposal-class-properties', { loose: true }],
             '@babel/plugin-syntax-dynamic-import',
-            'react-hot-loader/babel'
+            'react-hot-loader/babel',
           ]
         }
-      }
+      },
+      // {
+      //   loader: 'react-hot-loader/webpack',
+      //   options: {
+      //     noRegister: true,
+      //   },
+      // }
     ],
     exclude: /node_modules/
   }

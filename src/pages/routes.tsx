@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 
-import { Home, Messages, SignIn } from '../../../pages';
+import { Home, Messages, SignIn } from "./index"
 
 export const Routes: React.FunctionComponent = () => (
   <Switch>

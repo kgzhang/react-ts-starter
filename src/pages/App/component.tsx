@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Routes from './Routes';
+import Routes from '../routes';
 import ErrorBoundary from './ErrorBoundary';
-// import GloablStyle from './GlobalStyle';
-import PageView from '../PageView';
+import {PageView} from '../../components';
 
 
 export type AppProps = Readonly<{}>;

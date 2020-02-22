@@ -2,12 +2,12 @@
  *
  * Entry point of the app
  */
-
+import 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { initializeAnalytics } from './analytics';
-import { Root } from './components';
+import { Root } from './pages';
 import { register as registerServiceWorker } from './serviceWorkerRegistration';
 
 import './styles/index.scss';

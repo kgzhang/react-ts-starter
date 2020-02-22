@@ -1,7 +1,7 @@
-import React, { StrictMode } from 'react';
-
 import { hot } from 'react-hot-loader/root';
-import App from '../App';
+import React, { StrictMode } from 'react';
+import App from './App'
+
 
 
 
